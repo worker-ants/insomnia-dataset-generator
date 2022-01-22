@@ -1,0 +1,8 @@
+- _id: ${ID}
+  parentId: ${PARENT_ID}
+  modified: ${MODIFIED_AT}
+  created: ${CREATED_AT}
+  fileName: "${FILE_NAME}"
+  contents: ""
+  contentType: yaml
+  _type: api_spec

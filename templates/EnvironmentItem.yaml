@@ -1,0 +1,20 @@
+- _id: ${ID}
+  parentId: ${PARENT_ID}
+  modified: ${MODIFIED_AT}
+  created: ${CREATED_AT}
+  name: "${NAME}"
+  data:
+    gqlHost: "${GQL_HOST}"
+    htUserID: "${HT_USER_ID}"
+    htUserPassword: "${HT_USER_PASSWORD}"
+    credential: "{% response 'body', '${CREDENTIAL_REQUEST_ID}', 'b64::JC5kYXRhLm5ld0F1dGhUb2tlbi5hY2Nlc3NUb2tlbg==::46b', 'always', 300 %}"
+  dataPropertyOrder:
+    "&":
+      - gqlHost
+      - htUserID
+      - htUserPassword
+      - credential
+  color: null
+  isPrivate: false
+  metaSortKey: ${SORT_ID}
+  _type: environment

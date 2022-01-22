@@ -1,0 +1,11 @@
+- _id: ${ID}
+  parentId: ${PARENT_ID}
+  modified: ${MODIFIED_AT}
+  created: ${CREATED_AT}
+  name: Base Environment
+  data: {}
+  dataPropertyOrder: null
+  color: null
+  isPrivate: false
+  metaSortKey: ${SORT_ID}
+  _type: environment

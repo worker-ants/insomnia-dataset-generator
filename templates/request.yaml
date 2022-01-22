@@ -1,0 +1,29 @@
+- _id: ${ID}
+  parentId: ${PARENT_ID}
+  modified: ${MODIFIED_AT}
+  created: ${CREATED_AT}
+  url: "{{ _.gqlHost }}"
+  name: "${NAME}"
+  description: |-
+    ${DESCRIPTION}
+  method: POST
+  body:
+    mimeType: application/graphql
+    text: '${QUERY_DATA}'
+  parameters: []
+  headers:
+    - name: Content-Type
+      value: application/json
+      id: "${HEADER_CONTENT_TYPE_ID}"
+  authentication:
+    type: bearer
+    token: "{{ _.credential }}"
+  metaSortKey: ${SORT_ID}
+  isPrivate: false
+  settingStoreCookies: false
+  settingSendCookies: false
+  settingDisableRenderRequestBody: false
+  settingEncodeUrl: true
+  settingRebuildPath: true
+  settingFollowRedirects: global
+  _type: request

@@ -1,0 +1,10 @@
+- _id: ${ID}
+  parentId: ${PARENT_ID}
+  modified: ${MODIFIED_AT}
+  created: ${CREATED_AT}
+  name: "${NAME}"
+  description: "${DESCRIPTION}"
+  environment: {}
+  environmentPropertyOrder: null
+  metaSortKey: ${SORT_ID}
+  _type: request_group

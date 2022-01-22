@@ -1,0 +1,8 @@
+- _id: ${ID}
+  parentId: null
+  modified: ${MODIFIED_AT}
+  created: ${CREATED_AT}
+  name: "${NAME}"
+  description: "${DESCRIPTION}"
+  scope: design
+  _type: workspace
