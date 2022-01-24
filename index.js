@@ -143,7 +143,7 @@ class Generate {
     }
 
     setRequest(pid, apiData) {
-        const id = this.staticId[apiData.type] ?? this.getId(Generate.ID_PREFIX.REQUEST, pid);
+        const id = this.staticId[apiData.type] ?? this.getId(Generate.ID_PREFIX.REQUEST, apiData.path);
         const description = apiData.description
             .replace(/^/mg, ''.padStart(env.INDENT * 2, ' '))
             .replace(/^[\s]+/, "")
@@ -204,7 +204,7 @@ class Generate {
         await Promise.allSettled(
             data.dir.map(async (item) => {
                 const subPath = resolve(data.parent, item);
-                await this.recursive(subPath, pid);
+                await this.recursive(subPath, id);
             })
         );
 
@@ -225,6 +225,7 @@ class Generate {
     async getApiData(sourcePath) {
         const contents = await readFile(sourcePath, "utf-8");
         return {
+            path: sourcePath,
             title: (() => {
                 const title = contents.match(/^#[\s\t]+(.+)$/m);
                 return title ? title[1] : null;
